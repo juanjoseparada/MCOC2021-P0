@@ -1,6 +1,6 @@
 from numpy import zeros
 from time import perf_counter
-
+import numpy as np
 
 
 #Tamaño
@@ -18,3 +18,4 @@ dt = t2 - t1
 
 print(f"dt = {dt} s")
 
+print("AB = ", np.matmul(A,B))
