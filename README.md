@@ -43,11 +43,18 @@
 
 Desempeño MATMUL
 
+![image](https://user-images.githubusercontent.com/88350743/128542058-c9d29886-2e4e-44bb-876e-b860aae41838.png)
 
 
 ¿Cómo difiere del gráfico del profesor/ayudante?
+Viendo los dos tipos de graficos, se puede ver una gran diferencia en los tiempos transcurridos al ejecutar el programa, esto se puede deber a la diferencia de computadores basicamente y la velocidad de estos para procesar los datos. Se pudo notar un tiempo de 0.1 ms mientras que en el mio se demoraba 0.1 s. Mi grafico tuvo un problema de ultimo segundo que pretendo no incluirlo en mis resultados, el cual unió el último trammo con el primero.
+
 
 ¿A qué se pueden deber las diferencias en cada corrida?
+Se puede ver 
+
+
+
 
 El gráfico de uso de memoria es lineal con el tamaño de matriz, pero el de tiempo transcurrido no lo es ¿porqué puede ser?
 
