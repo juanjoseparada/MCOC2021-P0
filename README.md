@@ -73,3 +73,26 @@ Durante la ejecución de su código ¿se utiliza más de un procesador? Muestre 
 
 ![image](https://user-images.githubusercontent.com/88350743/128545404-1455afd5-4ecb-40a1-8a64-2dd0b4bf6d6d.png)
 
+
+
+
+------------------------------------------------------------------DESEMPEÑO DE INV--------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
