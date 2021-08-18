@@ -1,19 +1,20 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Aug 18 18:11:06 2021
+Created on Wed Aug 18 18:44:10 2021
 
 @author: juanp
 """
 
 
-#-------------------------------------------CASO 2  LONGDOUBLE-------------------------------------
+
+#-------------------------------------------CASO 3  HALF-------------------------------------
 
 from numpy.linalg import inv
 from time import perf_counter
 from numpy import float32
 from laplaciana import laplaciana
 import numpy as np
-from numpy import zeros, float16, float32,float64, longdouble
+from numpy import zeros, float16, float32,float64
 import matplotlib.pylab as plt
 from scipy import linalg
 
@@ -25,10 +26,10 @@ bytes_t1=[]
 
 
 Ns= [1,2,3,4,5,6,7,8,9,10,14,16,20,23,27,36,50,100,130,150,210,
-     270,350,420,500,560,600,750,890,950,1000,5000]
+     270,350,420,500,560,600,750,890,950,1000,2500,5000]
 
 
-texto= open(f"Rendimiento Caso 2, longdouble.txt", "w")
+texto= open(f"Rendimiento Caso 3, half.txt", "w")
 
 for i in range(10):
     
@@ -36,10 +37,10 @@ for i in range(10):
         
 # Con el metodo aprendido en clases llamamos a la funcion previamente creada        
         t1= perf_counter()
-        A= laplaciana(N, dtype= longdouble)
+        A= laplaciana(N, dtype= float16)
         t2= perf_counter()
         
-        C= linalg.inv(A, overwrite_a=False)
+        C= linalg.inv(A, overwrite_a=True)
         
         t3= perf_counter()
         
@@ -73,7 +74,7 @@ tiempo= []
 memoria=[]
 tamaño =[]
 
-text= open("Rendimiento Caso 2, longdouble.txt", "r")
+text= open("Rendimiento Caso 3, half.txt", "r")
 info= text.read()
 info= info.split("\n")
 info.pop(0)
@@ -128,5 +129,5 @@ plt.xlabel("Tamaño matriz N")
 plt.ylabel("Uso de Memoria")
 
 
-plt.savefig("CASO 2 LONGDOUBLE")
+plt.savefig("CASO 3 HALF")
 plt.show()    
