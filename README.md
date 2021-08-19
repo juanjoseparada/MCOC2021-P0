@@ -80,9 +80,17 @@ Durante la ejecución de su código ¿se utiliza más de un procesador? Muestre 
 
 Primero que nada cabe recalcar lo que sucedio en el proceso, donde al trabajar con el caso 1 se notó que los tipos de datos half y longdouble no pudieron ser ejecutados debido a que la libreria numpy no los tiene incluidos. Por otro lado con la libreria Scipy el unico que actuó diferente fue el tipo longdouble, que al principio no corrió debido a que Python trabaja hasta los 64 bits y le estaba pidiendo 128, con lo cual se cambio el "float128" por "longdouble" al momento de importarlo y pudo correr el programa y entregar buenos rendimientos. 
 
-También su pudo notar una gran diferencia entre el uso de distintas librerias, donde scypy actuó de forma mucho mas rápida que numpy. Y hablando mas en especifico de la libreria scypy se pudo notar que la función overwrite_a(False) se ejecuto de mejor manera que todos los otros procesos en los diferentes scripts.
+También su pudo notar una gran diferencia entre el uso de distintas librerias, donde scypy actuó de forma mucho mas rápida que numpy. Y hablando mas en especifico de la libreria scypy se pudo notar que la función overwrite_a(True) se ejecuto de mejor manera que todos los otros procesos en los diferentes scripts.
+
+
+
+PREGUNTAS
 
 ¿Que algoritmos de inversión cree que utiliza cada metodo (ver wiki)? Justifique
+
+Librería Numpy: es ejecutado con numpy.linalg.solve(MAtrizNxN, I) donde se utiliza la factorización LU (Lapack) mediante solve. 
+
+Librería Scipy:ejecutado con scipy.linalg.inv(), también utiliza Lapack pero  también es optimizado por Atlas y Blas. Debido a esto se demorá menos tiempo en entregar resultados, ya que procesa rapidamente funciones del algebra lineal como las que ocupamos ahora. 
 
 
 
