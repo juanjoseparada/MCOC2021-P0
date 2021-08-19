@@ -78,12 +78,20 @@ Durante la ejecución de su código ¿se utiliza más de un procesador? Muestre 
 
 ------------------------------------------------------------------DESEMPEÑO DE INV--------------------------------------------------------------------------
 
+Primero que nada cabe recalcar lo que sucedio en el proceso, donde al trabajar con el caso 1 se notó que los tipos de datos half y longdouble no pudieron ser ejecutados debido a que la libreria numpy no los tiene incluidos. Por otro lado con la libreria Scipy el unico que actuó diferente fue el tipo longdouble, que al principio no corrió debido a que Python trabaja hasta los 64 bits y le estaba pidiendo 128, con lo cual se cambio el "float128" por "longdouble" al momento de importarlo y pudo correr el programa y entregar buenos rendimientos. 
+
+También su pudo notar una gran diferencia entre el uso de distintas librerias, donde scypy actuó de forma mucho mas rápida que numpy. Y hablando mas en especifico de la libreria scypy se pudo notar que la función overwrite_a(False) se ejecuto de mejor manera que todos los otros procesos en los diferentes scripts.
+
+¿Que algoritmos de inversión cree que utiliza cada metodo (ver wiki)? Justifique
 
 
 
+¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? Justifique su comentario en base al uso de procesadores y memoria observado durante las corridas. 
+
+En este caso se pudo ver que el paralelismo en el proceso de ejecución actuó de buena manera, ya que se puede ver en la foto presente a continuación como estos se distribuyen el trabajo entre sí logrando tener un funcionamiento mas eficiente al momento de ejecutar el codigo
 
 
-
+![image](https://user-images.githubusercontent.com/88350743/129986842-129a16fb-cd54-44e0-a5a2-507f26b87847.png)
 
 
 
