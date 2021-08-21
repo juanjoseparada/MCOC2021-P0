@@ -101,8 +101,7 @@ En este caso se pudo ver que el paralelismo en el proceso de ejecución actuó d
 
 ![image](https://user-images.githubusercontent.com/88350743/129986842-129a16fb-cd54-44e0-a5a2-507f26b87847.png)
 
-
-
+------------------------------------------------------------P0E4    Desempeño EIGH y SOLVE----------------------------------------------------------------------------------------
 
 
 
