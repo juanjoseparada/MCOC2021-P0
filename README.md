@@ -104,7 +104,27 @@ En este caso se pudo ver que el paralelismo en el proceso de ejecución actuó d
 ------------------------------------------------------------P0E4    Desempeño EIGH y SOLVE----------------------------------------------------------------------------------------
 
 
+Comentarios: 
 
+Se pudo notar una subida en los tiempo en las matrices menores a 10. Esto ocurrió a ultimo momento, ya que se encontró el error pero no alcanzaba el tiempo para cambiarlo. Esto ocurre ya que al pasar el archivo de texto a una lista se llama a la función "pop()" la cual en las matrices pequeñas al eliminar el ultimo termino elimina un "elevado a..." lo cual hace que el exponente desaparezca haciendo que el tiempo transcurrido suba a esos valores. Ademas el computador demoro mas de lo esperado en los procesos, teniendo que dejar como tamaño maximo de matriz N=3000.
+
+
+
+Preguntas:
+
+
+2- La variavilidad del tiempo fue algo que se pudo notar hasta sin ver los graficos y resultados, ya que al momento de ejecutar el metodo Solve fue mucho mas rapido que al ocupar Eigh. 
+Pero al evaluar el caso A, se pudo notar una demora mayor en el caso 1 y en el caso 6, ya que el overwrite_b actuó de forma menos eficiente.En el caso B , se pudo notar como el desempeño de Eigh fue notablemte mas lento, notando ademas una gran diferencia entre el caso 4 y 5.
+
+3-  En el caso A fue notablemente mas rapido el caso 2 "assum_a="pos""
+     En el caso B fue mas rapido el caso 3 con el overwrite_a= True, como se esperaba despues de la entrega anterior
+     
+     
+4- Sí, pero también hay que asumir que el computador ocupará el paralelismo, con lo cual no afectaría tanto en el desempeño.
+
+5- Sí, de hecho al ver el rendimiento de estos se pudo ver que actuaban todos al mismo tiempo. (Paralelismo)
+
+6- Se pudo ver un comportamiento similar a la entrega anterior. Pero al correr Eigh se utilizó mas
 
 
 
