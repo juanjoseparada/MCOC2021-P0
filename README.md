@@ -144,13 +144,15 @@ Se utilizó la siguiente función para crear la matriz del tipo llena, logrando 
              if abs(i-j) == 1:
                  A[i,j] = -1
                  A[j,i] = -1      
-     return(A)```
-     
+     return(A)
+
+ ```
 y para la  la matriz dispersa se ocupó el siguiente codigo con la función "eye" ya que para la matriz del tipo llena no lo pudo soportar por el tipo de dato utilizado  
 
-
+ 
  ```def laplaciana_dispersa(N, dtype):
-    return 2*sparse.eye(N,dtype=dtype)-sparse.eye(N,N,1,dtype=dtype)-sparse.eye(N,N,-1,dtype=dtype) ```   
+    return 2*sparse.eye(N,dtype=dtype)-sparse.eye(N,N,1,dtype=dtype)-sparse.eye(N,N,-1,dtype=dtype)
+ ```   
 
 
 
