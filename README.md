@@ -134,7 +134,9 @@ Para esta entrega se ocupó nuevamente la operación MATMUL, donde se buscó pod
 
 ![Rendimiento Solve Dispersa](https://user-images.githubusercontent.com/88350743/131203458-f6741b1b-a82a-4843-9e88-163c51a82350.jpg)
 
-```def laplaciana(N, dtype):
+Se utilizó la siguiente función para crear la matriz del tipo llena, logrando reutilizar la función ocupada en las entregas anteriores
+
+``def laplaciana(N, dtype):
      A = zeros((N,N) , dtype=dtype)
      for i in range(N):
          A[i,i] = 2
@@ -142,11 +144,13 @@ Para esta entrega se ocupó nuevamente la operación MATMUL, donde se buscó pod
              if abs(i-j) == 1:
                  A[i,j] = -1
                  A[j,i] = -1      
-     return(A)```
-  
+     return(A)``
+     
+y para la  la matriz dispersa se ocupó el siguiente codigo con la función "eye" ya que para la matriz del tipo llena no lo pudo soportar por el tipo de dato utilizado  
+
+
  ```def laplaciana_dispersa(N, dtype):
-    return 2*sparse.eye(N,dtype=dtype)-sparse.eye(N,N,1,dtype=dtype)-sparse.eye(N,N,-1,dtype=dtype)     
-    ```   
+    return 2*sparse.eye(N,dtype=dtype)-sparse.eye(N,N,1,dtype=dtype)-sparse.eye(N,N,-1,dtype=dtype) ```   
 
 
 
