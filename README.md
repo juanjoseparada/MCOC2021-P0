@@ -126,8 +126,9 @@ Pero al evaluar el caso A, se pudo notar una demora mayor en el caso 1 y en el c
 
 6- Se pudo ver un comportamiento similar a la entrega anterior. Pero al correr Eigh se utilizó mas
 
+----------------------------------------------------------------- P0E5 Matrices dispersas y complejidad computacional----------------------------------------------------------
 
-
+Para esta entrega se ocupó nuevamente la operación MATMUL, donde se buscó poder ver la diferencias de tiempos transcurido en operaciones de tipo Solve realizadas entre matrices laplacianas llenas y dispersas. Después de realizar lo anterior se pudo notar una gran diferencia en los tiempos transcurridos al ocupar estos diferentes tipos de matrices, donde la matriz dipersa necesito muchisimo menos tiempo que la matriz llena. Esto hizo sentido inmediato ya que la matriz del tipo dispersa contiene menos numeros que la matriz llena, debido a que todos los números ceros son eliminados de esta, con lo cual ocupará mucho menos datos y necesitará realizar menos operaciones. Esto se pude notar facilmente en los graficos obtenidos de tiempo vs tamaño de matriz.
 
 
 
