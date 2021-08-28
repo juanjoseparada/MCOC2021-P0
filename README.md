@@ -134,8 +134,8 @@ Para esta entrega se ocupó nuevamente la operación MATMUL, donde se buscó pod
 
 ![Rendimiento Solve Dispersa](https://user-images.githubusercontent.com/88350743/131203458-f6741b1b-a82a-4843-9e88-163c51a82350.jpg)
 
-
-` def laplaciana(N, dtype):
+`
+  def laplaciana(N, dtype):
      A = zeros((N,N) , dtype=dtype)
      for i in range(N):
          A[i,i] = 2
