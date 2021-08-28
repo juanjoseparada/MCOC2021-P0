@@ -136,7 +136,8 @@ Para esta entrega se ocupó nuevamente la operación MATMUL, donde se buscó pod
 
 Se utilizó la siguiente función para crear la matriz del tipo llena, logrando reutilizar la función ocupada en las entregas anteriores
 
-```def laplaciana(N, dtype):
+```
+def laplaciana(N, dtype):
      A = zeros((N,N) , dtype=dtype)
      for i in range(N):
          A[i,i] = 2
