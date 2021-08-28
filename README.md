@@ -128,11 +128,6 @@ Pero al evaluar el caso A, se pudo notar una demora mayor en el caso 1 y en el c
 
 ----------------------------------------------------------------- P0E5 Matrices dispersas y complejidad computacional----------------------------------------------------------
 
-Para esta entrega se ocupó nuevamente la operación MATMUL, donde se buscó poder ver la diferencias de tiempos transcurido en operaciones de tipo Solve realizadas entre matrices laplacianas llenas y dispersas. Después de realizar lo anterior se pudo notar una gran diferencia en los tiempos transcurridos al ocupar estos diferentes tipos de matrices, donde la matriz dipersa necesito muchisimo menos tiempo que la matriz llena. Esto hizo sentido inmediato ya que la matriz del tipo dispersa contiene menos numeros que la matriz llena, debido a que todos los números ceros son eliminados de esta, con lo cual ocupará mucho menos datos y necesitará realizar menos operaciones. Esto se pude notar facilmente en los graficos obtenidos de tiempo vs tamaño de matriz.
-
-![Rendimiento Solve Lleno](https://user-images.githubusercontent.com/88350743/131203445-c6ef3f0c-75aa-4e3b-8072-bef5b08e266f.jpg)
-
-![Rendimiento Solve Dispersa](https://user-images.githubusercontent.com/88350743/131203458-f6741b1b-a82a-4843-9e88-163c51a82350.jpg)
 
 Se utilizó la siguiente función para crear la matriz del tipo llena, logrando reutilizar la función ocupada en las entregas anteriores
 
@@ -155,7 +150,11 @@ y para la  la matriz dispersa se ocupó el siguiente codigo con la función "eye
     return 2*sparse.eye(N,dtype=dtype)-sparse.eye(N,N,1,dtype=dtype)-sparse.eye(N,N,-1,dtype=dtype)
  ```   
 
+Para esta entrega se ocupó nuevamente la operación MATMUL, donde se buscó poder ver la diferencias de tiempos transcurido en operaciones de tipo Solve realizadas entre matrices laplacianas llenas y dispersas. Después de realizar lo anterior se pudo notar una gran diferencia en los tiempos transcurridos al ocupar estos diferentes tipos de matrices, donde la matriz dipersa necesito muchisimo menos tiempo que la matriz llena. Esto hizo sentido inmediato ya que la matriz del tipo dispersa contiene menos numeros que la matriz llena, debido a que todos los números ceros son eliminados de esta, con lo cual ocupará mucho menos datos y necesitará realizar menos operaciones. Esto se pude notar facilmente en los graficos obtenidos de tiempo vs tamaño de matriz y mostrados a contianuacíón:
 
+![Rendimiento Solve Lleno](https://user-images.githubusercontent.com/88350743/131203445-c6ef3f0c-75aa-4e3b-8072-bef5b08e266f.jpg)
+
+![Rendimiento Solve Dispersa](https://user-images.githubusercontent.com/88350743/131203458-f6741b1b-a82a-4843-9e88-163c51a82350.jpg)
 
 
 
