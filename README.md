@@ -130,5 +130,26 @@ Pero al evaluar el caso A, se pudo notar una demora mayor en el caso 1 y en el c
 
 Para esta entrega se ocupó nuevamente la operación MATMUL, donde se buscó poder ver la diferencias de tiempos transcurido en operaciones de tipo Solve realizadas entre matrices laplacianas llenas y dispersas. Después de realizar lo anterior se pudo notar una gran diferencia en los tiempos transcurridos al ocupar estos diferentes tipos de matrices, donde la matriz dipersa necesito muchisimo menos tiempo que la matriz llena. Esto hizo sentido inmediato ya que la matriz del tipo dispersa contiene menos numeros que la matriz llena, debido a que todos los números ceros son eliminados de esta, con lo cual ocupará mucho menos datos y necesitará realizar menos operaciones. Esto se pude notar facilmente en los graficos obtenidos de tiempo vs tamaño de matriz.
 
+![Rendimiento Solve Lleno](https://user-images.githubusercontent.com/88350743/131203445-c6ef3f0c-75aa-4e3b-8072-bef5b08e266f.jpg)
+
+![Rendimiento Solve Dispersa](https://user-images.githubusercontent.com/88350743/131203458-f6741b1b-a82a-4843-9e88-163c51a82350.jpg)
+
+
+def laplaciana(N, dtype):
+    A = zeros((N,N) , dtype=dtype)
+    
+    for i in range(N):
+        A[i,i] = 2
+        for j in range(max(0,i-2),i):
+            if abs(i-j) == 1:
+                A[i,j] = -1
+                A[j,i] = -1      
+    return(A)
+    
+   
+git status
+git add
+git commit 
+
 
 
