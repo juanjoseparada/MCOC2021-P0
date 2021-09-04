@@ -156,5 +156,68 @@ Para esta entrega se ocupó nuevamente la operación MATMUL, donde se buscó pod
 
 ![Rendimiento Solve Dispersa](https://user-images.githubusercontent.com/88350743/131203458-f6741b1b-a82a-4843-9e88-163c51a82350.jpg)
 
+################################################################      P0E6     ############################################################################
+
+Se editó la entrega P0E5, logrando que los graficos den lo que se pedía, obteniendo así:
+
+![Rendimiento MATMUL Llena](https://user-images.githubusercontent.com/88350743/132075659-e925d22b-8c6d-4fd4-9d98-593df720e084.png)
+
+![Rendimiento MATMUL Dispersa](https://user-images.githubusercontent.com/88350743/132075664-066e35b4-195b-4039-aa19-972074091670.png)
+
+
+Luego se trabajó con los procesos de Solve e INV:
+
+
+SOLVE:
+
+![Rendimiento Solve Dispersa](https://user-images.githubusercontent.com/88350743/132075787-57292cbd-be42-42a3-a47b-bea3b8af6118.png)
+![Rendimiento Solve Llena](https://user-images.githubusercontent.com/88350743/132075794-7d6a18ee-4f65-4355-9a6f-8c3294ae4a35.png)
+
+Comente las diferencias que ve en el comportamiento de los algoritmos en el caso de matrices llenas y dispersas.
+
+La principal diferencia entre estos dos casos es el tiempo que se demora en ejecutar cada código. Donde se pudo notar que en el caso de matrices llenas se demora mucho mas en ejecutarlo, al contrario de las matrices dispersas, donde se pudo llegar a tamaños de matrices (Ns) muchísimos mas grandes. Esto se podría explicar debido a la cantidad de datos que cada algoritmo debe manejar, ya que las matrices dispersas eliminan todos los ceros que contiene la matriz, haciendo que la cantidad de datos sea mucho menor.
+
+¿Cual parece la complejidad asintótica (para N→∞)  para el ensamblado y solución en ambos casos y porqué?
+
+Llena: Se puede ver como al aumentar empieza a tener un comportamiento asintotico hacía O^N4, esto quiere decir que si duplicas el tamaño de tu N  y tu tiempo inicial es t, el nuevo tiempo será 2^(4)*t
+
+Dispersa: Para este caso se puede ver como al aumentar empieza a tener un comportamiento asintotico hacía O^N3, esto quiere decir que si duplicas el tamaño de tu N  y tu tiempo inicial es t, el nuevo tiempo será 2^(3)*t
+
+¿Como afecta el tamaño de las matrices al comportamiento aparente?
+
+En el caso de las matrices llenas a partir del N=200 se empieza a notar una gran diferencia en el tiempo de solución, mientras que en las matrices dispersas no hay una diferencias tan notoria. Pero a simple vista se puede ver que las matrices dispersas son mucho mas rapidas
+
+
+¿Qué tan estables son las corridas (se parecen todas entre si siempre, nunca, en un rango)?
+
+Son menos estables que en el caso INV, pero solamente se nota un poco de diferencia en ambas en las matrices de tamaños mas chicas, sobre todo las llenas ya que trabajan con menores tamaños, pero en las dispersas se notan mas estables desde N=5000 para arriba.
+
+
+
+INV:
+
+![Rendimiento INV Dispersa](https://user-images.githubusercontent.com/88350743/132075764-1110a6da-a194-48de-94a6-d81aaafce550.png)
+![Rendimiento INV Llena](https://user-images.githubusercontent.com/88350743/132075770-28d455da-7837-4547-bc8c-36729a151c52.png)
+
+Comente las diferencias que ve en el comportamiento de los algoritmos en el caso de matrices llenas y dispersas.
+
+La principal diferencia entre estos dos casos es el tiempo que se demora en ejecutar cada código. Donde se pudo notar que en el caso de matrices llenas se demora mucho mas en ejecutarlo, al contrario de las matrices dispersas, donde se pudo llegar a tamaños de matrices (Ns) muchísimos mas grandes. Esto se podría explicar debido a la cantidad de datos que cada algoritmo debe manejar, ya que las matrices dispersas eliminan todos los ceros que contiene la matriz, haciendo que la cantidad de datos sea mucho menor.
+
+
+
+¿Cual parece la complejidad asintótica (para N→∞)  para el ensamblado y solución en ambos casos y porqué?
+
+En ambos casos se puede ver como al aumentar empieza a tener un comportamiento asintotico hacía O^N4, esto quiere decir que si duplicas el tamaño de tu N  y tu tiempo inicial es t, el nuevo tiempo será 2^(4)*t
+
+¿Como afecta el tamaño de las matrices al comportamiento aparente?
+
+Afecta bastante, pero no como en el caso de los Solve. En este caso se pudo ver una gran diferencia ya que las dispersas trabajan con mucho menos datos (por que elimina los ceros), pero se puede ver un comportamiento mas lineal en el caso de las dispersas respecto al tiempo, al contrario de las matrices llenas, donde a subir los datos sube abruptamente el tiempo.
+
+
+
+¿Qué tan estables son las corridas (se parecen todas entre si siempre, nunca, en un rango)?
+
+No se notan grandes diferencias entre las corridas. Las dispersas son muy estables, y en las llenas se puede ver un poco  mas diferencia entre las matrices de 10x10 y 200x200
+
 
 
